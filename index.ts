@@ -1,11 +1,11 @@
-import mongoose from 'mongoose'
+import { connect } from 'mongoose'
 import app from "./src/app"
 
 const PORT:any = process.env.PORT ? process.env.PORT : 8000;
 const uri: string = process.env.DATABASE_URL + '/' + process.env.DATABASE_NAME
 
 // MongoDB connection
-mongoose.connect(uri).then(()=>{
+connect(uri).then(()=>{
   console.log('Database connected')
   
   // Start express server.
