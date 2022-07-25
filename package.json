@@ -8,6 +8,7 @@
     "prestart": "npm run build",
     "start": "node dist/index.js",
     "dev": "env-cmd --file .env nodemon index.ts",
+    "api": "/home/somnath/mongodb/bin/mongod --dbpath=/home/somnath/mongodb-data",
     "lint": "tslint -c tslint.json -p tsconfig.json",
     "lint-fix": "tslint -c tslint.json -p tsconfig.json --fix"
   },
@@ -17,6 +18,7 @@
   "devDependencies": {
     "@types/cors": "^2.8.12",
     "@types/express": "^4.17.13",
+    "@types/mongoose": "^5.11.97",
     "@types/node": "^17.0.21",
     "env-cmd": "^10.1.0",
     "nodemon": "^2.0.15",
@@ -26,6 +28,7 @@
   },
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.17.3"
+    "express": "^4.17.3",
+    "mongoose": "^6.4.6"
   }
 }
